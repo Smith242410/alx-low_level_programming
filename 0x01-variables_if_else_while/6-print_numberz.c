@@ -7,10 +7,13 @@
  */
 int main(void)
 {
-	char value;
+	int value = 48;
 
-	for (value = '0'; value <= '9'; value++)
+	while (value < 58)
+	{
 		putchar(value);
+		value++;
+	}
 	putchar('\n');
 	return (0);
 }
