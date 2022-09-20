@@ -1,8 +1,9 @@
-#include "main.h"
 #include <stdio.h>
 
+void reset_to_98(int *);
+
 /**
- * main - Entry point
+ * main - Check the code
  *
  * Return: Always 0
  */
