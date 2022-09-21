@@ -10,3 +10,8 @@ char *_strncat(char *dest, char *src, int n)
 {
 	return (strncat(dest, src, n));
 }
+
+char *_strncpy(char *dest, char *src, int n)
+{
+	return (strncpy(dest, src, n));
+}
