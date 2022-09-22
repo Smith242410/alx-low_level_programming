@@ -58,3 +58,38 @@ char *cap_string(char *s)
 	}
 	return (s);
 }
+
+char *leet(char *var)
+{
+	int len = strlen(var), x = 0;
+
+	while (x < len)
+	{
+		if (var[x] == 'a' || var[x] == 'A')
+		{
+			var[x] = '4';
+		}
+		else if (var[x] == 'e' || var[x] == 'E')
+		{
+			var[x] = '3';
+		}
+		else if (var[x] == 'o' || var[x] == 'O')
+		{
+			var[x] = '0';
+		}
+		else if (var[x] == 't' || var[x] == 'T')
+		{
+			var[x] = '7';
+		}
+		else if (var[x] == 'l' || var[x] == 'L')
+		{
+			var[x] = '1';
+		}
+		else
+		{
+			continue;
+		}
+		x++;
+	}
+	return (var);
+}
