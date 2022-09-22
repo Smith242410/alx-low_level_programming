@@ -78,17 +78,17 @@ char *leet(char *s)
 
 char *rot13(char *s)
 {
-	char a[] = "abcdefghijklmnopqrsutvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int i, j;
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	int x, y;
 
-	for (x = 0; *(s + x); x++)
+	for (i = 0; *(s + i); i++)
 	{
-		for (y = 0; y < 52; y++)
+		for (j = 0; j < 52; j++)
 		{
-			if (a[y] == *(s + x))
+			if (a[j] == *(s + i))
 			{
-				*(s + x) = b[y];
+				*(s + i) = b[j];
 				break;
 			}
 		}
