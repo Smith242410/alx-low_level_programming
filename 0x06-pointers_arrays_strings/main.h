@@ -75,3 +75,27 @@ char *leet(char *s)
 	}
 	return (s);
 }
+
+char *rot13(char *s)
+{
+	char a[] = "abcdefghijklmnopqrsutvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int x, y, len1 = strlen(s), len2 = strlen(a);
+
+	for (x = 0; x < len1; x++)
+	{
+		for (y = 0; y < len2; y++)
+		{
+			if (s[x] == a[y])
+			{
+				s[x] = b[y];
+				break;
+			}
+			else
+			{
+				continue;
+			}
+		}
+	}
+	return (s);
+}
