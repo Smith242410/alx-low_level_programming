@@ -59,37 +59,19 @@ char *cap_string(char *s)
 	return (s);
 }
 
-char *leet(char *var)
+char *leet(char *s)
 {
-	int len = strlen(var), x = 0;
+	int i, j;
+	char a[] = "aAeEoOtTlL";
+	char b[] = "4433007711";
 
-	while (x < len)
+	for (i = 0; *(s + i); i++)
 	{
-		if (var[x] == 'a' || var[x] == 'A')
+		for (j = 0; j <= 9; j++)
 		{
-			var[x] = '4';
+			if (a[j] == *(s + i))
+				*(s + i) = b[j];
 		}
-		else if (var[x] == 'e' || var[x] == 'E')
-		{
-			var[x] = '3';
-		}
-		else if (var[x] == 'o' || var[x] == 'O')
-		{
-			var[x] = '0';
-		}
-		else if (var[x] == 't' || var[x] == 'T')
-		{
-			var[x] = '7';
-		}
-		else if (var[x] == 'l' || var[x] == 'L')
-		{
-			var[x] = '1';
-		}
-		else
-		{
-			continue;
-		}
-		x++;
 	}
-	return (var);
+	return (s);
 }
