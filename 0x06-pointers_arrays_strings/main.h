@@ -80,15 +80,15 @@ char *rot13(char *s)
 {
 	char a[] = "abcdefghijklmnopqrsutvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	int x, y, len1 = strlen(s), len2 = strlen(a);
+	int x, y, len = strlen(a);
 
-	for (x = 0; x < len1; x++)
+	for (x = 0; *(s + x); x++)
 	{
-		for (y = 0; y < len2; y++)
+		for (y = 0; y < len; y++)
 		{
-			if (s[x] == a[y])
+			if (a[y] == *(s + x))
 			{
-				s[x] = b[y];
+				*(s + x) = b[y];
 				break;
 			}
 			else
