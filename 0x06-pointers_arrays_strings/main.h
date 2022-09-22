@@ -22,19 +22,15 @@ int _strcmp(char *s1, char *s2)
 	return (strcmp(s1, s2));
 }
 
-void reverse_array(int *a, int n)
+char *string_toupper(char *str)
 {
-	int temp, start, end;
+	int i = 0;
 
-	start = 0;
-	end = n-1;
-	while (start < end)
+	while (str[i] != '\0')
 	{
-	        temp = a[start];  
-	        a[start] = a[end];
-	        a[end] = temp;
-		start++;
-		end--;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		i++;
 	}
+	return (str);
 }
-
