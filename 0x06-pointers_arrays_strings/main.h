@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <unistd.h>
 
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 char *_strcat(char *dest, char *src)
 {
 	return (strcat(dest, src));
@@ -192,4 +197,22 @@ void print_buffer(char *b, int size)
 	}
 	if (size == 0)
 		putchar('\n');
+}
+
+void print_number(int n)
+{
+	unsigned int a;
+
+	if (n < 0)
+	{
+		a = -n;
+		_putchar('-');
+	}
+	else
+	{
+		a = n;
+	}
+	if (a / 10)
+		print_number(a / 10);
+	_putchar((a % 10) + '0');
 }
