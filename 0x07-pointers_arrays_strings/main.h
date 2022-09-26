@@ -20,3 +20,11 @@ char *_strchr(char *s, char c)
 	x = strchr(s, c);
 	return (x);
 }
+
+unsigned int _strspn(char *s, char *accept)
+{
+	int len;
+
+	len = strspn(s, accept);
+	return (len);
+}
