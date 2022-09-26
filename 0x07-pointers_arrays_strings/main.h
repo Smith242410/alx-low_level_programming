@@ -28,3 +28,19 @@ unsigned int _strspn(char *s, char *accept)
 	len = strspn(s, accept);
 	return (len);
 }
+
+char *_strpbrk(char *s, char *accept)
+{
+	char *ans;
+
+	ans = strpbrk(s, accept);
+	return (ans);
+}
+
+char *_strstr(char *haystack, char *needle)
+{
+	char *ans;
+
+	ans = strstr(haystack, needle);
+	return (ans);
+}
