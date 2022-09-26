@@ -44,3 +44,26 @@ char *_strstr(char *haystack, char *needle)
 	ans = strstr(haystack, needle);
 	return (ans);
 }
+
+void print_chessboard(char(*a)[8])
+{
+	int x, y, row, col;
+
+	row = 8;
+	col = 8;
+
+	for (x = 0; x < row; x++)
+	{
+		for (y = 0; y < col; y++)
+		{
+			if (y == col-1)
+			{
+				putchar('\n');
+			}
+			else
+			{
+				printf("%c", a[x][y]);
+			}
+		}
+	}
+}
