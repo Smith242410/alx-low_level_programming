@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
+
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 
 char *_memset(char *s, char b, unsigned int n)
 {
@@ -47,23 +53,15 @@ char *_strstr(char *haystack, char *needle)
 
 void print_chessboard(char(*a)[8])
 {
-	int x, y, row, col;
+	int x, y;
 
-	row = 8;
-	col = 8;
-
-	for (x = 0; x < row; x++)
+	for (x = 0; x < 8; x++)
 	{
-		for (y = 0; y < col; y++)
+		for (y = 0; y < 8; y++)
 		{
-			if (y == col-1)
-			{
-				putchar('\n');
-			}
-			else
-			{
-				printf("%c", a[x][y]);
-			}
+			_putchar(a[x][y]);
 		}
+		_putchar('\n');
 	}
 }
+
