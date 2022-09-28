@@ -75,3 +75,8 @@ void print_diagsums(int *a, int size)
 	}
 	printf("%d, %d\n", m, n);
 }
+
+void set_string(char **s, char *to)
+{
+	*s = to;
+}
