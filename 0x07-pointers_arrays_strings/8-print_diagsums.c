@@ -1,9 +1,9 @@
 #include "main.h"
 
-void print_chessboard(char (*a)[8]);
+void print_diagsums(int *a, int size);
 /**
  * main - Entry point
  *
- * Return: Always 0
+ * Retrun: Always 0
  */
 int main(void);
