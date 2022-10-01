@@ -1,5 +1,5 @@
 #include <stdio.h>
-nclude "main.h"
+#include "main.h"
 
 /**
  * main - First Task
